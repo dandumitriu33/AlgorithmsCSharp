@@ -1,9 +1,6 @@
 ﻿using AlgorithmsImplementation;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DFSTraverse
 {
@@ -21,7 +18,7 @@ namespace DFSTraverse
             // g is the Adjacency List representing the graph
             // 0 => 1, 9 // 1 => 0, 8  // 9 => 0, 8  // 8 => 7  // 7 => 10, 11, 6, 3  // 10 => 7, 11
             // 11 => 10, 7  // 6 => 7, 5  // 3 => 2, 4  // 5 => 6, 3  // 2 => 3  // 4 => 3  // 12 => None
-            
+
             Node n0 = new Node(0);
             n0.Connections.Add(1);
             n0.Connections.Add(9);
@@ -72,7 +69,7 @@ namespace DFSTraverse
             Node n12 = new Node(12);
             AllNodes.Add(n12);
 
-            
+
             foreach (Node item in AllNodes)
             {
                 List<int> temp = new List<int>();
@@ -80,16 +77,16 @@ namespace DFSTraverse
                 {
                     temp.Add(connection);
                 }
-                Graph.Add(item.Id, temp);      
+                Graph.Add(item.Id, temp);
             }
 
             // visited is the list that keeps track of the nodes we looked at
             // bool[] visited = new bool[n];
-            for (int i=0; i < Visited.Length; i++)
+            for (int i = 0; i < Visited.Length; i++)
             {
                 Visited[i] = false;
             }
-            
+
             // start_node is the node where we start the traversing
             int start_node = 0;
             dfs(start_node);
