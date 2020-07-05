@@ -106,7 +106,7 @@ namespace DFSTraverse
             else
             {
                 Console.WriteLine($"Looking at node {at} with neightbors {AllNodes[at].ToString()}");
-                Console.WriteLine($"******************************************* Node {at} actual work as it was reached during traversal.");
+                Console.WriteLine($"******************************************* Node {at} actual work as it was reached during traversal");
                 Visited[at] = true;
             }
             List<int> neighbours = Graph[at];
